@@ -2,7 +2,9 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{tikz} 
-\usepackage[left=4cm,right=4cm,top=3.5cm,bottom=4.18834cm]{geometry}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} 
+
 \title{Computer Workshop\\ Final Assignment : All Together}
 \author{Kasra Khalaj}
 \date{Due: 7 Bahman, 1402}
@@ -14,4 +16,11 @@
 \pagenumbering{arabic}
 \large
 
+\tableofcontents
+\section{Git and GitHub}
+\subsection{ Repository Initialization and Commits}
+Firstly i created a normal folder and initialized a Git repository using the git init command in my powershell, after creating a new repo on GitHub, i copied the link in the Code tab and used git clone <url> in my powershell in the folder which a git repo was initialized using git init. then i made a .github folder and then in it a workflow folder to copy the main.yml file in it, then i made a 
+ simple latex doc named main.tex for the very start, then i simply used the command git add . And this is optional now in some way but in order to practice tags i used git tag 1.0.0. and then git commit -m "Added the workflow and main.tex files and folders". Then i simply pushed the origin main to update my Github repo, everything else is going to be like this in some way.
+ \subsection{GitHub Actions for LaTeX Compilation}
+ I've actually answered to this in my previous response. Everything is done by the main.yml that we have in our workflow folder in some way. The workflow has some particular configuration to make a certain .tex file to a .pdf file. The challenge i encountered was the fact that if i want to make releases of main.pdf, i have to use the tag when pushing too like this => "git push origin 1.9.8", when using this command the release version 1.9.8 will be deplying the main.pdf file in the actions/workflows, when it's deployed, the file is easily downloadable. This is amazing. GitHub vaghean fogholadas aslan ashnayiati nadashtam, hanuzam kheili kheili kam daram vali be lotfe shoma ziad shod etelaatam mamnonam kheili kelase khubi bud.
 \end{document}
